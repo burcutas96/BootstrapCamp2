@@ -1,0 +1,22 @@
+.myHeight{
+    height: 700px;
+}
+
+.myHeight2{
+    height: 250px;
+}
+
+.box{
+    width: 5rem;
+    height: 5rem;
+    background-color: burlywood;
+}
+
+.box2{
+    left: 70%;
+    top: 50%;
+}
+
+
+
+
