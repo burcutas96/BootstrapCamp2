@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap 5 | 27. Ders</title>
+</head>
+<body>
+    <div class="container my-3 p-4">
+
+        <p>Gutter, Bootstrap'ın grid sisteminde duyarlı bir şekilde boşluk bırakmak ve içeriği hizalamak için 
+            kullanılan sütunlarınız arasındaki padding'dir.
+        </p>
+        <p>gx-* class'ı ile yatayda boşluk bırakılırken gy-* class'ı ile dikeyde boşluk bırakılır.</p>
+        <p>gx-* class'ının default değeri gx-4'tür. Biz vermesekte varsayılan olarak bu değer verilir.</p>
+        <div class="row gx-5">
+            <div class="col bg-dark">
+                <div class="p-3 border border-primary bg-light">Paddingli Sütun1</div>
+            </div>
+            <div class="col bg-danger">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+        </div>
+
+
+        <p class="mt-5">
+            Diyelim ki biz backend tarafından verilerimizi alıyoruz ve kaç tane verinin geleceğini bilmiyoruz. Bu durumda
+            gelen sütunlar arasında boşluk bırakabilmek için gx-*, g-* veya gy-* class'larını kullanabiliriz.
+        </p>
+        <div class="row gy-3">
+            <div class="col-6 bg-secondary">
+                <div class="p-3 border border-primary bg-light">Paddingli Sütun1</div>
+            </div>
+            <div class="col-6 bg-info">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+            <div class="col-6 bg-secondary">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+            <div class="col-6 bg-info">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+        </div>
+
+
+        <p class="mt-5">g-* class'ı ile hem dikey hem yatay boşluklar da verebiliriz.</p>
+        <div class="row g-2">
+            <div class="col-6">
+                <div class="p-3 border border-primary bg-light">Paddingli Sütun1</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+        </div>
+
+
+        <p class="mt-5">Gutter'ı breakpoint noktaları ile de kullanabiliriz.</p>
+        <div class="row g-md-5">
+            <div class="col-6">
+                <div class="p-3 border border-primary bg-light">Paddingli Sütun1</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+        </div>
+
+        <p class="mt-5">Gutter'ı breakpoint noktaları ile de kullanabiliriz.</p>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-4">
+            <div class="col">
+                <div class="p-3 border border-primary bg-light">Paddingli Sütun1</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border border-success bg-light">Paddingli Sütun2</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
