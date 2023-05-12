@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap 5 | 28. Ders</title>
+</head>
+
+<body>
+    <!-- Ders içeriği: breadcumb ve badge -->
+
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12">
+                <h4>Badge başlıkla kullanımı <div class="badge bg-danger">yeni</div>
+                </h4>
+            </div>
+        </div>
+
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <button type="button" class="btn btn-success">Bildirimler
+                    <span class="badge bg-light text-dark">7</span>
+                </button>
+            </div>
+        </div>
+
+
+        <!-- .visually-hidden class'ı ekran okuyucular için. -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <button type="button" class="btn btn-warning position-relative">Gelen Kutusu
+                    <span class="badge bg-danger text-white position-absolute top-0 start-100
+                        translate-middle rounded-pill">+5
+                        <span class="visually-hidden">Okunmamış mesajlar</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+
+        <p class="mt-5">Badge'leri kullanırken span etiketini kullanıyoruz. Çünkü div block
+            eleman olduğu için tüm satırı kaplıyor. Ve biz de tüm satırı değil sadece içeriği
+            kadar yer kaplamasını istediğimiz için div'i değil span etiketini kullanıyoruz.
+        </p>
+        <span class="badge bg-primary">Primary</span>
+        <span class="badge bg-secondary">Secondary</span>
+        <span class="badge bg-success">Success</span>
+        <span class="badge bg-danger">Danger</span>
+        <span class="badge bg-warning text-dark">Warning</span>
+        <span class="badge bg-info text-dark">Info</span>
+        <span class="badge bg-light text-dark">Light</span>
+        <span class="badge bg-dark">Dark</span>
+        <br><br>
+
+        <span class="badge rounded-pill bg-primary">Primary</span>
+        <span class="badge rounded-pill bg-secondary">Secondary</span>
+        <span class="badge rounded-pill bg-success">Success</span>
+        <span class="badge rounded-pill bg-danger">Danger</span>
+        <span class="badge rounded-pill bg-warning text-dark">Warning</span>
+        <span class="badge rounded-pill bg-info text-dark">Info</span>
+        <span class="badge rounded-pill bg-light text-dark">Light</span>
+        <span class="badge rounded-pill bg-dark">Dark</span>
+
+
+        <p class="mt-5">
+            Breadcrumb, geçerli sayfanın konumunu oluşturmak için CSS aracılığıyla otomatik olarak ayırıcılar ekleyerek
+            bir gezinme hiyerarşisi oluşturur.
+        </p>
+        <div class="row">
+            <div class="col-12">
+                <nav>
+                    <!-- ekran okuyuculara hangi sayfada olduğumuzu belirtmek için aria-current="page" attribute'unu kullandım. 
+                        Tabi kullanıcı sayfayı değştirdikçe biz de backend tarafında bu attribute'un ve active class'ının 
+                        yerini değiştirmeliyiz.
+                    -->
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Anasayfa</a></li>
+                        <li class="breadcrumb-item"><a href="#">Kütüphane</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="#">Veri</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+
+        <p class="mt-3">Breadcrumb'ın işaretini (yani / (slaş) işaretini) değiştirebiliriz.</p>
+        <div class="row">
+            <div class="col-12">
+                <nav style="--bs-breadcrumb-divider:'>';">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Anasayfa</a></li>
+                        <li class="breadcrumb-item"><a href="#">Kütüphane</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="#">Veri</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
