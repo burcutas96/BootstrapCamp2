@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap 5 | 30. Ders</title>
+</head>
+<body>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-12">
+                <!-- role attribute'u ile elemanın status rolünde olduğunu ekran okuyuculara belirtmiş olduk.
+                    - ve visually-hidden class'ı ile oluşturduğumuz span elemanı ise yine ekran okuyucu 
+                    kullanan kullanıcılar için oluşturuldu.
+                -->
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-border text-secondary" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-border text-danger" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-border text-warning" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-border text-info" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-border text-light" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-border text-dark" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-border text-black" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+            </div>
+        </div>
+
+
+        <p class="mt-5">Eğer klasik yükleniyor modelini kullanmak istemiyorsak gittikçe büyüyen yüklenme efektini de kullanabiliriz.</p>
+        <div class="row">
+            <div class="col-12">
+                <div class="spinner-grow text-primary" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-grow text-secondary" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-grow text-success" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-grow text-warning" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-grow text-info" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-grow text-light" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-grow text-dark" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-grow text-black" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+            </div>
+        </div>
+
+
+        <p class="mt-5">
+            Spinner'ı boyutlandırabiliriz. Ancak spinner'ı daha büyük boyutta kullanmak istiyorsak bootstrap'ın bunun 
+            için oluşturduğu hazır bir class yok. Dolayısıyla büyütme işlemini manuel olarak css ile yapmak zorundayız.    
+        </p>
+        <div class="row">
+            <div class="col">
+                <div class="spinner-border text-primary spinner-border-sm" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-border text-secondary" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="spinner-grow text-warning spinner-grow-sm" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-grow text-black" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+            </div>
+        </div>
+
+
+        <p class="mt-5">Spinner'ları hizalandırabiliriz.</p>
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Yükleniyor</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col text-center">
+                <div class="spinner-grow text-warning" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4 bg-dark-subtle p-3">
+            <div class="col">
+                <div class="d-flex flex-column align-items-center">
+                    <strong>Yükleniyor...</strong>
+                    <div class="spinner-border text-primary mt-2" role="status" aria-hidden="true"></div>
+                    <!-- Ekran okuyuculara spinner'ın görünmez olmasını sağladık. Çünkü zaten üstünde yükleniyor metni var.
+                        Ayrıca yükleniyor şeklinde bir bilgilendirme yapmamıza gerek yok.
+                    -->
+                </div>
+            </div>
+        </div>
+
+
+        <p class="mt-5">Spinner'ları butonlar ile kullanabiliriz.</p>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-success">
+                    <span class="spinner-border text-light spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Yükleniyor...
+                </button>
+            </div>
+
+            <div class="col">
+                <button type="button" class="btn btn-success">
+                    <span class="spinner-grow text-light spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    Yükleniyor...
+                </button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
