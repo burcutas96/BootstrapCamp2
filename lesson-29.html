@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap 5 | 29. Ders</title>
+</head>
+
+<body>
+    <div class="container my-3">
+        <p>> progress bar, ilerleme çubuğu oluşturmamıza yardımcı olur.</p>
+        <p>> progress bar'ın default rengi primary'dir.</p>
+        <div class="row">
+            <div class="col-12">
+                <!-- role attribute'u ile ekran okuyuculara bu elemanın hangi rolde olduğunu belirttik. 
+                    - aria-valuemin="" attribute'u ile ekran okuyuculara bu progress-bar'ın minimum değerini belirtmiş oluyoruz.
+                    - aria-valuemax="" attribute'u ile ekran okuyuculara bu progress-bar'ın maximum değerini belirtmiş oluyoruz.
+                    - aria-valuenow="" attribute'u ile ise ekran okuyuculara bu progress-bar'ın şu anki değerini belirtmiş oluyoruz.
+                -->
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="progress">
+                    <div class="progress-bar" style="width: 15%;" role="progressbar" aria-valuemin="0" 
+                        aria-valuemax="100" aria-valuenow="15">%15
+                    </div>
+                </div>
+                <div class="progress mt-4">
+                    <div class="progress-bar" style="width: 33%;" role="progressbar" aria-valuemin="0" 
+                        aria-valuemax="100" aria-valuenow="33">%33
+                    </div>
+                </div>
+                <div class="progress mt-4">
+                    <div class="progress-bar" style="width: 67%;" role="progressbar" aria-valuemin="0" 
+                        aria-valuemax="100" aria-valuenow="67">%67
+                    </div>
+                </div>
+                <div class="progress mt-4">
+                    <div class="progress-bar" style="width: 100%;" role="progressbar" aria-valuemin="0" 
+                        aria-valuemax="100" aria-valuenow="100">%100
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <p class="mt-5">> progress-bar çubuğumuzun yüksekliğini css ile değiştirebiliriz.</p>
+        <div class="row">
+            <div class="col-12">
+                <div class="progress" style="height: 8%;">
+                    <div class="progress-bar" style="width: 15%;" role="progressbar" aria-valuemin="0" 
+                        aria-valuemax="100" aria-valuenow="15">
+                    </div>
+                </div>
+                <div class="progress mt-4" style="height: 30px;">
+                    <div class="progress-bar" style="width: 33%;" role="progressbar" aria-valuemin="0" 
+                        aria-valuemax="100" aria-valuenow="33">%33
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <p class="mt-5">> progress-bar çubuğumuzun rengini değiştirebiliriz.</p>
+        <div class="row">
+            <div class="col-12">
+                <div class="progress">
+                    <div class="progress-bar bg-danger" style="width: 15%;" role="progressbar" aria-valuemin="0" 
+                        aria-valuemax="100" aria-valuenow="15">
+                    </div>
+                </div>
+                <div class="progress mt-4">
+                    <div class="progress-bar bg-secondary" style="width: 33%;" role="progressbar" aria-valuemin="0" 
+                        aria-valuemax="100" aria-valuenow="33">
+                    </div>
+                </div>
+                <div class="progress mt-4">
+                    <div class="progress-bar bg-success" style="width: 67%;" role="progressbar" aria-valuemin="0" 
+                        aria-valuemax="100" aria-valuenow="67">
+                    </div>
+                </div>
+                <div class="progress mt-4">
+                    <div class="progress-bar bg-warning" style="width: 100%;" role="progressbar" aria-valuemin="0" 
+                        aria-valuemax="100" aria-valuenow="100">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <p class="mt-5">> progress-bar çubuğumuzun stilini değiştirebiliriz.</p>
+        <div class="row">
+            <div class="col-12">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped" style="width: 57%;" role="progressbar" aria-valuemin="0" 
+                        aria-valuemax="100" aria-valuenow="57">
+                    </div>
+                </div>
+                <div class="progress mt-4">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 57%;" role="progressbar" aria-valuemin="0" 
+                        aria-valuemax="100" aria-valuenow="57">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row my-5">
+            <div class="col-12">
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 40%;" role="progressbar" aria-valuemin="0" 
+                        aria-valuemax="100" aria-valuenow="40">Boş Alan
+                    </div>
+                    <div class="progress-bar bg-warning" style="width: 15%;" role="progressbar" aria-valuemin="0" 
+                        aria-valuemax="100" aria-valuenow="15">Uyarı
+                    </div>
+                    <div class="progress-bar bg-danger" style="width: 20%;" role="progressbar" aria-valuemin="0" 
+                        aria-valuemax="100" aria-valuenow="20">Alarm
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
