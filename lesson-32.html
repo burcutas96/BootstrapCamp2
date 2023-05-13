@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap 5 | 32. Ders</title>
+</head>
+
+<body>
+    <div class="container my-4">
+        <div class="row">
+            <p class="text-danger fw-bold">> Bootstrap ile liste oluşturma</p>
+            <div class="col-4">
+                <ul class="list-group">
+                    <li class="list-group-item disabled" aria-disabled="true">Html</li>
+                    <li class="list-group-item">Css</li>
+                    <li class="list-group-item">Javascript</li>
+                    <li class="list-group-item">Php</li>
+                    <li class="list-group-item active" aria-current="true">C#</li>
+                    <li class="list-group-item">Python</li>
+                    <!-- aria-current="true" attribute'u ile hangi liste elemanının aktif, seçili olduğunu bildirmiş oluyoruz.-->
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="row mt-5">
+            <!-- Link listesi oluşturduğumuzda unorder list'i değil div'i kullanmamız gerekir. -->
+            <!-- .list-group-item-action class'ını, elemanın bir link olduğunu belirtmek için kullanırız. -->
+            <p class="text-danger fw-bold">> Link listesi oluşturma</p>
+            <div class="col-4">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">C++</a>
+                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">C</a>
+                    <a href="#" class="list-group-item list-group-item-action">Bootstrap</a>
+                    <a href="#" class="list-group-item list-group-item-action">Angular</a>
+                    <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1">React</a>
+                    <a href="#" class="list-group-item list-group-item-action">Javascript</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <p class="text-danger fw-bold">> Buton listesi oluşturma</p>
+            <div class="col-4">
+                <div class="list-group">
+                    <button type="button" class="list-group-item list-group-item-action">C++</button>
+                    <button type="button" class="list-group-item list-group-item-action">C</button>
+                    <button type="button" class="list-group-item list-group-item-action" disabled tabindex="-1">Bootstrap</button>
+                    <button type="button" class="list-group-item list-group-item-action">Angular</button>
+                    <button type="button" class="list-group-item list-group-item-action">React</button>
+                    <button type="button" class="list-group-item list-group-item-action active" aria-current="true">Javascript</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <p class="text-danger fw-bold">
+                > .list-group-flush class'ı ile farklı bri liste stili oluşturabiliriz. 
+                Tablonun sağ ve sol kenarlıkları ortadan kaldırılıyor.
+            </p>
+            <div class="col-4">
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action">C++</button>
+                    <button type="button" class="list-group-item list-group-item-action">C</button>
+                    <button type="button" class="list-group-item list-group-item-action">Bootstrap</button>
+                    <button type="button" class="list-group-item list-group-item-action">Angular</button>
+                    <button type="button" class="list-group-item list-group-item-action">React</button>
+                    <button type="button" class="list-group-item list-group-item-action">Javascript</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <p class="text-danger fw-bold">
+                > Yatay bir liste oluşturabiliriz. Yatay liste oluştururken breakpoint noktalarını kullanabiliriz.
+            </p>
+            <div class="col-4">
+                <div class="list-group list-group-horizontal-md">
+                    <button type="button" class="list-group-item list-group-item-action">C++</button>
+                    <button type="button" class="list-group-item list-group-item-action">C</button>
+                    <button type="button" class="list-group-item list-group-item-action">Bootstrap</button>
+                    <button type="button" class="list-group-item list-group-item-action">Angular</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <p class="text-danger fw-bold">> .list-group-numbered class'ı ile listemizi numaralı bir şekilde oluşturabiliriz.</p>
+            <div class="col-4">
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item">C++</li>
+                    <li class="list-group-item">C</li>
+                    <li class="list-group-item">Bootstrap</li>
+                    <li class="list-group-item">Angular</li>
+                </ol>
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <p class="text-danger fw-bold">> Liste elemanlarımıza tek tek renk verebiliriz.</p>
+            <div class="col-4">
+                <ol class="list-group list-group-flush">
+                    <li class="list-group-item list-group-item-secondary">C++</li>
+                    <li class="list-group-item list-group-item-warning">C</li>
+                    <li class="list-group-item list-group-item-danger">Bootstrap</li>
+                    <li class="list-group-item list-group-item-info">Angular</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
