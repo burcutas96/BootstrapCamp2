@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap 5 | 31. Ders</title>
+</head>
+<body>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col">
+                <nav aria-label="sayfalama bölümü">
+                    <ul class="pagination pagination-lg">
+                        <li class="page-item"><a href="#" class="page-link">Önceki</a></li>
+                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">Sonraki</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="sayfalama bölümü">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a href="#" class="page-link">Önceki</a></li>
+                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">Sonraki</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="sayfalama bölümü">
+                    <ul class="pagination pagination-sm justify-content-end">
+                        <li class="page-item"><a href="#" class="page-link">Önceki</a></li>
+                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">Sonraki</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="row mt-4">
+            <div class="col">
+                <p>
+                    > Ekran okuyucular, aşağıdaki simgelerin ne anlama geldiğini bilmediği için aria-label="" 
+                    attribute'u ile onlara bu simgelerin ne amaçla kullanıldığını belirten bir bilgilendirme yapmalıyız.
+                </p>
+                <nav aria-label="sayfalama bölümü">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a href="#" class="page-link disabled" aria-label="önceki" tabindex="-1">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item active" aria-current="page"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item">
+                            <a href="#" class="page-link" aria-label="sonraki">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
