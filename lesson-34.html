@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap 5 | 34. Ders</title>
+</head>
+<body>
+    <div class="container my-3">
+        
+        <p>> data-bs-placement="" attribute'ları ile tooltip'in ne tarafta açılacağını belirlemiş oluyoruz.</p>
+        <p>> Tooltip'lerin içerisinde html etiketlerini de kullanabiliriz.</p>
+        <p>> data-bs-html="true" attribute'u ile tooltip'in içerisinde html etiketlerini kullanabiliyoruz.</p>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="top" 
+                    title="Burcu Taş">Yukarı Tooltip
+                </button>
+                <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="right" 
+                    title="Burcu Taş">Sağ Tooltip
+                </button>
+                <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+                    title="Burcu Taş">Aşağı Tooltip
+                </button>
+                <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="left" 
+                    title="Burcu Taş">Sol Tooltip
+                </button>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    data-bs-html="true" title="<strong>Fehmi Uyar</strong> <u>ile</u> <em>bootstrap</em>">Html ile Tooltip
+                </button>
+
+                <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="tıklanamaz">
+                    <button type="button" class="btn btn-primary" disabled>Pasif Buton</button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        var toolList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var toolTipList = toolList.map(function(x){
+            return new bootstrap.Tooltip(x, {
+                //Bütün tooltip'ler için aşağıdaki özellikler kullanılacak.
+                delay:{"show":1000, "hide":500},
+                html:true,  //Tooltip'lerin içerisinde html etiketlerini kullanabilmek için etiketlerin içinde data-bs-html="true"
+                            //attribute'unu kullanmak yerine burdaki js koduyla da müdahalede bulunabiliriz.
+                offset: [0,20]
+            });
+        });
+    </script>
+</body>
+</html>
