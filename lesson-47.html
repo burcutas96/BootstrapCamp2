@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap 5 | 47. Ders</title>
+</head>
+
+<body>
+    <div class="container">
+        <p>
+            > Offcanvas Nedir?: Offcanvas; görünümün sol, sağ veya alt kenarından görünmesi için
+            Javascript kullanarak görünümü değiştirmeye yardımcı olan bir kenar çubuğu bileşenidir.
+        </p>
+        <p>> Canvas'ları açmak için .offcanvas kimliğini işaret eden bir button veya bir a etiketi kullanmalıyız.</p>
+        <p>> Offcanvas, kapat düğmesi olan bir header ve body kısımlarından oluşur.</p>
+        <p>
+            > Offcanvas'ı sola, sağa, yukarıya veya aşağıya konumlandırmak için
+            .offcanvas-start|end|top|bottom'ı kullanırız.
+        </p>
+        <p>> .data-bs-dismiss class'ı ile hangi nesnenin kapatılacağını söylemiş oluyoruz.</p>
+        <p>> .data-bs-toogle class'ı ile hangi nesnenin kapatılıp açılacağını söylemiş oluyoruz.</p>
+
+
+        <div class="row mt-5">
+            <div class="col">
+                <!-- href attribute'una hangi canvas'ı tetiklemek istiyorsak onun id'sini veriyoruz. -->
+                <a href="#myCanvas" class="btn btn-info" data-bs-toggle="offcanvas" role="button"
+                    aria-controls="myCanvas">Linke tıkla
+                </a>
+
+                <!-- butonlarda href attribute'u olmadığı için bootstrap'ın oluşturduğu data-bs-target attribute'u ile 
+                        butonun hangi canvas'ı tetikleyeceğini belirtmiş oluyoruz.
+                    -->
+                <button type="button" data-bs-target="#myCanvas" class="btn btn-dark" data-bs-toggle="offcanvas" role="button"
+                    aria-controls="myCanvas">Butona tıkla
+                </button>
+
+                <!-- Sayfanın herhangi bir yerine tıklandığında canvas'ın kapanmasını istemiyorsak data-bs-backdrop="false"
+                    attribute'unu offcanvas'ın div'inde kullanmalıyız.
+                -->
+                <div class="offcanvas offcanvas-start" id="myCanvas" tabindex="-1" aria-labelledby="canvasLabel" 
+                    data-bs-backdrop="false">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="canvasLabel">Üyelik Sözleşmesi</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="kapat">
+                        </button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis nemo, maiores sequi eveniet,
+                            distinctio?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
