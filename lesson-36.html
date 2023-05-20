@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap 5 | 36. Ders</title>
+</head>
+<body>
+    <div class="container my-3">
+        <div class="row row-cols-1 row-cols-lg-3 gy-5">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero harum 
+                        ut impedit voluptatem iusto quidem quod. Fugit odit sint aliquid error 
+                        est ipsum odio maiores quibusdam sit, esse, mollitia unde?
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Kart Başlığı</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Kart için alt başlık</h6>
+                        <p class="card-text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero harum 
+                            ut impedit voluptatem iusto quidem quod. Fugit odit sint aliquid error 
+                            est ipsum odio maiores quibusdam sit, esse, mollitia unde?
+                        </p>
+                        <a href="#" class="card-link">İlk link</a>
+                        <a href="#" class="card-link">Son link</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Kartlara resim ekleme -->
+            <div class="col">
+                <div class="card">
+
+                    <!-- .card-img-top class'ı ile resmi, kartın en üst noktasında konumlandırmış oluyoruz. -->
+                    <img src="img/Tom's_Restaurant.jpg" alt="Tom's Restaurant" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero harum 
+                            ut impedit voluptatem iusto quidem quod. Fugit odit sint aliquid error 
+                            est ipsum odio maiores quibusdam sit, esse, mollitia unde?
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">Kullanılan Diller</div> <!-- Listeye card-header class'ı ile başlık ekleyebiliriz. -->
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Html</li>
+                        <li class="list-group-item">Css</li>
+                        <li class="list-group-item">Javascript</li>
+                        <li class="list-group-item">Bootstrap</li>
+                    </ul>
+                    <div class="card-footer">Kartın footer'ı burada</div> 
+                    <!-- Eğer kartın alt kısmında bişeyler oluşturmak istiyorsak .card-footer class'ını kullanabiliriz.-->
+                </div>
+            </div>
+
+
+            <!-- Birden fazla kartı birleştirip bir tane kartın içinde toplayabilir miyiz? Evet tabii ki... -->
+            <div class="col">
+                <div class="card">
+                    <img src="img/toms-restaurant-morningside.jpg" class="card-img-top" alt="Tom's Restaurant">
+                    <div class="card-body">
+                        <h5 class="card-title">Kart Başlığı</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero harum 
+                            ut impedit voluptatem iusto quidem quod. Fugit odit sint aliquid error 
+                            est ipsum odio maiores quibusdam sit, esse, mollitia unde?
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Html</li>
+                        <li class="list-group-item">Css</li>
+                        <li class="list-group-item">Javascript</li>
+                        <li class="list-group-item">Bootstrap</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">İlk link</a>
+                        <a href="#" class="card-link">Son link</a>
+                    </div>
+                </div>   
+            </div>
+        </div>
+
+
+        <div class="row mt-5 row-cols-2">
+            <div class="col">
+                <div class="card text-center">
+                    <h4 class="card-header">Ana Başlık Benim</h4>
+                    <div class="card-body">
+                        <h5 class="card-title text-muted">Body İçindeki Başlık</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero harum 
+                            ut impedit voluptatem iusto quidem quod. Fugit odit sint aliquid error 
+                            est ipsum odio maiores quibusdam sit, esse, mollitia unde?
+                        </p>
+                        <a href="#" class="btn btn-success" role="button">Devamını Gör</a>
+                    </div>
+                    <div class="card-footer text-muted">1 gün önce</div>  
+                    <!-- Örneğin bu site bir haber sitesi olsun footer'ın olduğu ilgili haberin ne zaman 
+                        yayınlandığına dair "1 gün önce, 5 gün önce" gibi bilgilendirmeler yapabiliriz.
+                    -->
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">Yazar</div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p class="mb-4">Dünyayı daha iyi yapmayan insan insan değildir!</p>
+                            <footer class="blockquote-footer">Fehmi UYAR</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
