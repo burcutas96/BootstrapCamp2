@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap 5 | 35. Ders</title>
+</head>
+<body>
+    <div class="container my-3">
+
+        <p>> data-bs-content="" attribute'u ile popover'ın içeriğini belirlemiş oluyoruz.</p>
+        <p>> popover'ları kullanabilmemiz için sadece bootstrap'ın attribute'larını kullanmak yeterli olmuyor.
+            Manuel olarak js kodları da yazmamız gerekiyor.
+        </p>
+        <p>> Popover'larda html etiketlerini de kullanabiliriz.</p>
+
+        <div class="row">
+            <!-- Butonlarla popover'ın kullanımı -->
+            <div class="col">
+                <button type="button" class="btn btn-dark" data-bs-toggle="popover"
+                    data-bs-placement="top" data-bs-content="Üstte açılan popover">Top
+                </button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-dark" data-bs-toggle="popover"
+                    data-bs-placement="right" data-bs-content="Sağda açılan popover">Right
+                </button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-dark" data-bs-toggle="popover"
+                    data-bs-placement="bottom" data-bs-content="Aşağıda açılan popover">Bottom
+                </button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-dark" data-bs-toggle="popover"
+                    data-bs-placement="left" data-bs-content="Solda açılan popover">Left
+                </button>
+            </div>
+
+
+            <!-- Linklerle popover'ın kullanımı -->
+            <div class="col">
+                <a tabindex="0" class="btn btn-danger" role="button" data-bs-toggle="popover"
+                    data-bs-trigger="focus" title="Kapatılabilir Popover" 
+                    data-bs-content="<strong>Burada</strong> <u>ilginç bir kapatma</u> şekli var değil mi?"> Tıkla Gör
+                </a>
+            </div>
+
+
+            <!-- Disabled butonlarda popover'ın kullanımı -->
+            <div class="col">
+            <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-content="Tıklanamaz Popover">
+                <button type="button" class="btn btn-warning" disabled>Pasif Buton</button>
+            </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        var List = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+        var popoverList = List.map(function(x){
+            //Aşağıdaki özellikler bütün popover'lar için geçerli olacak.
+            return new bootstrap.Popover(x, {
+                container: 'body',  //Bu özelliği js ile vermezsek popover'larımıza data-bs-container="body" attribute'unu eklemeliyiz..
+                delay: {"show": 1000, "hide": 400},
+                html: true,
+                //trigger: focus   //focus|hover|click;  bütün popover'larımızın nasıl kapatılacağını burdan kontrol edebiliriz. 
+                //placement: bottom,  
+                //title: "Başlık",
+                //offset: [0,50]    //popover'larımızın konumunu değiştirebiliriz.
+            });
+        });
+    </script>
+</body>
+</html>
