@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap 5 | 38. Ders</title>
+</head>
+<body>
+    <div class="container my-3">
+        <p>> Carousel'i otomatik başlatabilmek için data-bs-ride="carousel" attribute'unu kullanmalıyız.</p>
+        <p>> Slide'ın içindeki elemanlardan hangisine active class'ını verirsem o 
+            görsel ile slide'a başlayacağım anlamına geliyor.
+        </p>
+        <p>> İstersek slide'ın sağına ve soluna butonlarda ekleyebiliriz.</p>
+        <div class="row">
+            <div class="col">
+                <div class="carousel slide" id="mySlide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#mySlide" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="ilk slayt">
+                        </button>
+                        <button type="button" data-bs-target="#mySlide" data-bs-slide-to="1" aria-label="ikinci slayt">
+                        </button>
+                        <button type="button" data-bs-target="#mySlide" data-bs-slide-to="2" aria-label="üçüncü slayt">
+                        </button>
+                        <button type="button" data-bs-target="#mySlide" data-bs-slide-to="3" aria-label="dördüncü slayt">
+                        </button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <!-- Resme verdiğim d-block class'ı ile resmin, tüm slider satırını kaplamasını sağlıyorum. -->
+                            <img src="img/Tom's_Restaurant.jpg" alt="restaurant" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/jason-blackeye-364785-2.jpg" alt="jason blackeye" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block">   <!--Carousel'e altyazı eklemek için carousel-caption'ı kullanıyoruz.-->
+                                <h5>İkinci slayt etiketi</h5>   <!--Uzun, resme sığmayan altyazımızın small ekranlarda görünmesini istemiyoruz.-->
+                                <p>Harry Potter vizyona giriyor.</p>    <!--Ancak md ve daha büyük ekranlarda görünmesini sağlıyoruz.-->
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/toms-restaurant-morningside.jpg" alt="restaurant" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/image_optimzation.jpg" alt="image" class="d-block w-100">
+                        </div>
+                    </div>
+                    <!-- data-bs-target="#mySlide" attribute'u ile hangi carousel'i kontrol edeceğini bildirmiş oluyorum. -->
+                    <!-- data-bs-slide="prev" attribute'u ile görevinin ne olduğunu bildirmiş oluyorum. Yani bir önceki
+                        slide'a geçme görevini vermiş oluyorum. -->
+                    <button type="button" class="carousel-control-prev" data-bs-target="#mySlide" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Önceki</span> <!--Ekran okuyuculara yukarıdaki ikonun ne işe yaradığını bildirdik.-->
+                    </button>
+                    <button type="button" class="carousel-control-next" data-bs-target="#mySlide" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Sonraki</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
