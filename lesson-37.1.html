@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap 5 | 37. Ders</title>
+</head>
+<body>
+    <div class="container my-3">
+        <p class="text-danger">> Kartların genişliklerini değiştirebiliriz</p>
+        <div class="row">
+            <div class="col">
+                <div class="card w-75">
+                    <div class="card-body">
+                        <h5 class="card-title">Kart Başlık</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Aut numquam, ipsum dolorem id expedita, eveniet exercitationem 
+                            iure voluptates itaque reprehenderit esse ut eius, perspiciatis 
+                            porro alias nostrum ea blanditiis iusto.
+                        </p>
+                        <a href="#" class="btn btn-danger">Detay Gör</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <p class="text-danger mt-5">> Kartlarımızı css stilleri ile değiştirebiliriz.</p>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 19rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Kart Başlık</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Aut numquam, ipsum dolorem id expedita.
+                        </p>
+                        <p class="card-text text-muted"><small>7 dakika önce güncellendi</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <p class="text-danger mt-5">> Kartların içindeki elemanları hizalayabiliriz.</p>
+        <div class="row">
+            <div class="col">
+                <div class="card text-end">
+                    <div class="card-body">
+                        <h5 class="card-title">Kart Başlık</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Aut numquam, ipsum dolorem id expedita, eveniet exercitationem 
+                            iure voluptates itaque reprehenderit esse ut eius, perspiciatis 
+                            porro alias nostrum ea blanditiis iusto.
+                        </p>
+                        <a href="#" class="btn btn-danger">Detay Gör</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <p class="text-danger mt-5">> Tüm kartı resim ile kaplayıp üzerine yazı yazabiliriz.</p>
+        <p class="text-danger">
+            > Ancak burda dikkat etmemiz gereken önemli bir nokta var. O da şu ki; içeriğimizin 
+            resmin yüksekliğinden fazla olmaması gerekir. 
+        </p>
+        <p class="text-danger"> 
+            > Aksi taktirde içerik resmin içine sığmayıp taşacaktır. Bu da istemediğimiz bir görüntü 
+            oluşturur. Buna çözüm olarak  bulunduğu satıra row-cols-1 diyebiliriz. Yani small ekranlarda 
+            sütun sayısını bire düşürebiliriz ve daha büyük ekranlarda duruma göre sütun sayısını arttırabiliriz.
+        </p>
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col">
+                <div class="card text-light">
+                    <img src="img/Tom's_Restaurant.jpg" alt="Tom's restaurant" class="card-img-top img-fluid">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Kart Başlık</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Aut numquam, ipsum dolorem id expedita, eveniet exercitationem 
+                            iure voluptates itaque reprehenderit esse ut eius, perspiciatis 
+                            porro alias nostrum ea blanditiis iusto.
+                        </p>
+                        <a href="#" class="btn btn-danger">Detay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <p class="text-danger mt-5 fw-bold">> Kartlarda grid sistem</p>
+        <div class="row">
+            <div class="col-9">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img src="img/toms-restaurant-morningside.jpg" alt="grid resim" class="img-fluid rounded-start">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title">Kart Başlık</h5>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Aut numquam, ipsum dolorem id expedita, eveniet exercitationem 
+                                    iure voluptates itaque reprehenderit esse ut eius, perspiciatis 
+                                    porro alias nostrum ea blanditiis iusto.
+                                </p>
+                                <p class="card-text text-muted"><small>7 dakika önce güncellendi</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    
+</body>
+</html>
