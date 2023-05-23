@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/extra.css">
+    <title>Bootstrap 5 | 39. Ders</title>
+</head>
+<body>
+    <div class="container my-3">
+
+        <p>> Carousel slaytının geçiş efektini değiştirebiliriz. (carousel-fade)</p>
+        <p>> Geçiş sürelerini ayarlayabiliriz. Default olan süre 5000 yani 5 saniyedir. (data-bs-interval="500")</p>
+        <p>
+            > Slaytın mobil cihazlarda kaydırılarak geçilmesini istemiyorsak data-bs-ride="carousel" attribute'unu 
+            kaldırıp data-bs-touch="false" ve data-bs-interval="false" attribute'larını eklemeliyiz.
+        </p>
+        <p>
+            > Carousel elemanlarımızın koyu bir temayla oluşturulmasını sağlayabiliriz. 
+            Bunun için .carousel-dark class'ını kullanmalıyız.
+        </p>
+        <p>> Bootstrap'ın önceki ve sonraki slayta geçmek için oluşturmuş olduğu ikonları değiştirebiliriz.</p>
+        <div class="row">
+            <div class="col">
+                <div class="carousel slide carousel-fade" id="mySlide" data-bs-ride="carousel">
+                    <div class="position-absolute bottom-0 start-50 translate-middle myslide card text-white border-0">
+                        <div class="card-body">
+                            <h3>Ayrıcalıklarımızı fark et</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Vero qui expedita aperiam delectus sapiente, modi reiciendis.
+                            </p>
+                            <a href="#" class="btn btn-danger">Bize Katıl</a>
+                        </div>
+                    </div>
+                    <!-- carousel-indicators sınıfındaki butonlar ile slaytın altındaki ince çizgileri oluşturmuş oluyoruz.-->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#mySlide" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="ilk slayt">
+                        </button>
+                        <button type="button" data-bs-target="#mySlide" data-bs-slide-to="1" aria-label="ikinci slayt">
+                        </button>
+                        <button type="button" data-bs-target="#mySlide" data-bs-slide-to="2" aria-label="üçüncü slayt">
+                        </button>
+                        <button type="button" data-bs-target="#mySlide" data-bs-slide-to="3" aria-label="dördüncü slayt">
+                        </button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="1000">
+                            <img src="img/Tom's_Restaurant.jpg" alt="restaurant" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1000">
+                            <img src="img/jason-blackeye-364785-2.jpg" alt="jason blackeye" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block">   
+                                <h5>İkinci slayt etiketi</h5>
+                                <p>Harry Potter vizyona giriyor.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1000">
+                            <img src="img/toms-restaurant-morningside.jpg" alt="restaurant" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1000">
+                            <img src="img/image_optimzation.jpg" alt="image" class="d-block w-100">
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="carousel-control-prev" data-bs-target="#mySlide" data-bs-slide="prev">
+                        <!-- <span class="carousel-control-prev-icon"></span> -->
+                        <span class="bi bi-arrow-left-square fs-2" aria-hidden="true"></span>
+                        <!-- Dışardan aldığın ikonun etiketini span olarak değiştirmeyi unutma!!! -->
+                        <span class="visually-hidden">Önceki</span>
+                    </button>
+                    <button type="button" class="carousel-control-next" data-bs-target="#mySlide" data-bs-slide="next">
+                        <!-- <span class="carousel-control-next-icon"></span> -->
+                        <span class="bi bi-arrow-right-square fs-2" aria-hidden="true"></span>
+                        <span class="visually-hidden">Sonraki</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
