@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap 5 | 40. Ders Devamı</title>
+</head>
+
+<body>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col">
+                <button data-bs-target=".multi-collapse" class="btn btn-dark" data-bs-toggle="collapse" 
+                    aria-expanded="false" aria-controls="open1 open2">Buton
+                </button> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="collapse multi-collapse mt-4" id="open1">
+                    <div class="card border-info border-2">
+                        <div class="card-body">
+                            <h4 class="card-title text-info">Burası Gizliydi Hani!</h4>
+                            <p class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                Veritatis, magni, ipsam excepturi quo, in illo dignissimos adipisci minus,
+                                Debitis, eius impedit saepe corrupti nostrum quisquam sint exercitationem dolorum 
+                                deleniti et similique sapiente fuga? Vel fuga.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="collapse multi-collapse mt-4" id="open2">
+                    <img src="img/image_optimzation.jpg" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
