@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap 5 | 40. Ders</title>
+</head>
+<body>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn-close" aria-label="kapat"></button>
+                <!--disabled butonlar için tab-index="-1" dememize gerek yok. tabindex class'ını linkler için kullanıyoruz. -->
+                <button type="button" class="btn-close" aria-label="kapat" disabled></button>
+            </div>
+
+            <div class="col bg-dark py-2">
+                <button type="button" class="btn-close btn-close-white" aria-label="kapat"></button>
+                <button type="button" class="btn-close btn-close-white" aria-label="kapat" disabled></button>
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="col">
+                <a href="#open" class="btn btn-dark" role="button" data-bs-toggle="collapse" 
+                    aria-expanded="false" aria-controls="open">Link
+                </a>
+                <button data-bs-target="#open" class="btn btn-warning" data-bs-toggle="collapse" 
+                    aria-expanded="false" aria-controls="open">Buton
+                </button>
+
+                <!-- .collapse div'inin içine gizlemek istediğimiz içeriği koyuyoruz. Ve onu göstermek  
+                    istediğimizde bir link veya buton aracılığıyla ona ulaşmış oluyoruz.
+                -->
+                <!-- Eğer collapse'nin dikeyde değilde yatayda açılmasını istiyorsam 
+                    .collapse-horizantal class'ını kullanmalıyım. Ve ayrıca css ile açılacak 
+                    olan nesnenin genişliğini ayarlamalıyım. 
+                    (Eğer nesneye vereceğimiz genişlik 350px'den fazla olursa mobil ekranlara duyarlı 
+                    bir nesne oluşturmamış oluruz. Bu nedenle 350px'den büyük nesneleri 
+                    responsive hale getirebilmek için css ile müdahale etmemiz gerekecektir.)
+                -->
+
+                <div class="collapse collapse-horizontal mt-4" id="open">
+                    <div class="card border-info border-2" style="width: 350px;">
+                        <div class="card-body">
+                            <h4 class="card-title text-info">Burası Gizliydi Hani!</h4>
+                            <p class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                Veritatis, magni, ipsam excepturi quo, in illo dignissimos adipisci minus,
+                                Debitis, eius impedit saepe corrupti nostrum quisquam sint exercitationem dolorum 
+                                deleniti et similique sapiente fuga? Vel fuga.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
