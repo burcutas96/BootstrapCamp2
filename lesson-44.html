@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap 5 | 38. Ders</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col">
+
+                <!-- modal'ın bir buton ile çalışması için; -->
+                <!-- data-bs-toggle="modal" attribute'u ile butonun bir 
+                    modal tetikleme butonu olduğunu bildirmiş olduk. 
+                -->
+                <!-- data-bs-target="#myModal" attribute'u ile butonun 
+                    hangi modal'ı çalıştıracağını bildirmiş oluyoruz. 
+                -->
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" 
+                    data-bs-target="#myModal">Çıkış Yap
+                </button>
+
+                <!-- .fade class'ı modal'ın açılıp kapanırken bir efekt sağlar. -->
+                <div class="modal fade" tabindex="-1" id="myModal" aria-hidden="true"
+                    data-bs-backdrop="static" data-bs-keyboard="false">
+                    <!-- data-bs-backdrop="static" attribute'u ile modal'ın, sayfanın 
+                        herhangi bir yerine tıklandığında kapanmasını engelliyoruz. 
+                    --> 
+                    <!-- data-bs-keybord="false" attribute'u ile modal'ın,
+                        escape tuşuna basıldığında kapanmasını engelliyoruz.
+                    -->
+
+                    <!-- .modal-dialog-centered class'ı ile modal'ın dikey 
+                        hizalamada sitenin tam ortasına gelmesini sağlıyoruz. 
+                    -->
+                    <!-- .modal-dialog-scrollable class'ı, modal'a sığmayan içerik sebebiyle 
+                        sayfada çıkan scroll çubuğunun modal'da çıkmasını sağlar. (Bu farkı 
+                        görebilmek için modal-body div'inin içerisine uzun bir yazı ekle!) 
+                    -->
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="model-title">İşlem Bilgisi</h5>
+                                <button class="btn-close" type="button" data-bs-dismiss="modal"
+                                    aria-label="Kapat">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    <button class="btn btn-warning" title="popover" data-bs-toggle="popover"
+                                        data-bs-content="Buraya popover içeriği yazılır" type="button">Bana Tıkla
+                                    </button>
+                                </p>
+                                <p>Çıkış yapmak istediğinize emin misiniz?</p>
+                                <p>
+                                    <a href="#" role="button" data-bs-toggle="tooltip"
+                                        title="Tooltip bu mu?">Üzerine Gel
+                                    </a>
+                                </p>
+                                <img src="img/image_optimzation.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    İptal
+                                </button>
+                                <button type="button" class="btn btn-success">Onayla</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal'ı çalıştırmak için yazmamız gereken js kodları: -->
+    <script>
+        let myModal = new bootstrap.Modal(document.querySelector("#myModal"));
+        myModal.show();
+
+        //popover'ın tetiklenmesi için manuel olarak şu kodları yazmamız gerek:
+        let myElement1 = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+        var myList1 = myElement1.map(function(x){
+            return new bootstrap.Popover(x);
+        })
+
+        //tooltip'in tetiklenmesi için manuel olarak şu kodları yazmamız gerek:
+        let myElement2 = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var myList2 = myElement2.map(function(y){
+            return new bootstrap.Tooltip(y);
+        })
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
